@@ -5,9 +5,9 @@ function samyak(){
   var m = cd.getMinutes();
   var s = cd.getSeconds();
 
-  m = m < 10 ? `0${m}` : m;
-  s = s < 10 ? `0${s}` : s;
-  h = ((h + 11) % 12 + 1);
+  h = (h < 10) ? "0" + h : h;
+  m = (m < 10) ? "0" + m : m;
+  s = (s < 10) ? "0" + s : s;
   clock.innerText = `${h}:${m}:${s}`
   setTimeout(samyak, 1000)
 }
